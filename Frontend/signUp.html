@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="./img/twitter.png">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/login.css" />
+    <script src="js/main.js"></script>
+
+    <title>Sign Up</title>
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <!--Navigasi Atas-->
+            <nav>
+                <!--Logo-->
+                <a href="https://google.com">
+                    <h3><i class="fab fa-twitter"></i></h3>
+                </a>
+
+                <!--Bar kiri-->
+                <ul id="nav-bar-top">
+                    <li><a href="Login.html">Log <i class="fab fa-linkedin-in"></i></a></li>
+            </nav>
+        </header>
+
+        <section>
+            <div>
+
+            </div>
+            <!--Sign Up-->
+            <div id="signUp-section">
+                <form onsubmit="event.preventDefault(); signUp()" method="POST">
+                    <h1>Sign Up</h1>
+                    <p><input class="box-kecil" type="text" id="username" name="username" placeholder="Username"></p>
+                    <p><input class="box-kecil" type="text" id="fullname" name="fullname" placeholder="Full Name"></p>
+                    <p><input class="box-kecil" type="email" id="email" name="email" placeholder="Email"></p>
+                    <p><input class="box-kecil" type="password" id="password" name="password" placeholder="Password"></p>
+                    <p><input class="box-besar" type="text" id="bio" name="bio" placeholder="Bio"></p>
+                    <button type="submit" id="login-button">Create</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

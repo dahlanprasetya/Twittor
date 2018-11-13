@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="./img/twitter.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/edit.css" />
+    <script src="js/main.js"></script>
+
+    <title>Edit Profile</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <!--Navigasi Atas-->
+            <nav>
+                <!--Logo-->
+                <a href="home.html">
+                    <h3><i class="fab fa-twitter"></i></h3>
+                </a>
+
+                <!--Bar Navigasi Atas-->
+                <ul id="nav-bar-top">
+                    <li><a href="home.html"><img src="img/home-icon.png" style="width: 16px;"> Home</a></li>
+                    <li><a href="#"> <i class="far fa-bell"> Notification</i></a></li>
+                    <li><a href="#"> <i class="far fa-envelope"> Message</i></a></li>
+                </ul>
+
+                <!--Bar Search-->
+                <div id="nav-bar-search" style="padding-left: 0px;">
+                    <input type="text" id="search-box" placeholder="Search twitter">
+                    <i id="submit-search"class="fas fa-search"></i>
+
+                    <div class="dropdown" id="dropdown">
+                    <!-- <img class="dropbtn" href="#" src="img/men.jpg" alt="orang"/>
+                        <div class="dropdown-content">
+                            <a id="profile-dropdown" href="profile.html">John Pantau</a>
+                            <a href="edit.html">Setting and Privacy</a>
+                            <a href="#">Help Center</a>
+                            <a onclick="removeCookie()" href="Login.html" id="logout-button">Log Out</a>
+                        </div> -->
+                    </div>
+                    
+                    <button href="#" id="tweet-button">Tweet</button>
+                </div>
+            </nav>
+        </header>
+
+        <section>
+            <!--kiri-->
+            <div>
+                <!--profile-->
+                <div id="profile-section">
+                    <!-- <img src="img/profile-background.jpg"/>
+                    <img src="img/men.jpg" style="margin-left: 10px;">
+                    <div id="profile-name"><b>John Pantau</b></div>
+                        <ul>
+                            <li><a href="#">Tweets
+                                <br>
+                                102K
+                            </a></li>
+                            <li><a href="#">Followings
+                                <br>
+                                9
+                            </a></li>
+                            <li><a href="#">Followers
+                                <br>
+                                1 M
+                            </a></li>
+                        </ul> -->
+                </div>
+                <!--Credit-->
+                <div>
+                    <footer>
+                            © 2018 Twitter
+                            About
+                            Help Center
+                            Terms
+                            Privacy policy
+                            Cookies
+                            Ads info
+                            Brand
+                            Blog
+                            Status
+                            Apps
+                            Jobs
+                            Marketing
+                            Businesses
+                            Developers                       
+                    </footer>                    
+                </div>
+            </div>
+
+            <!--tengah-->
+            <div>
+                <!--edit-->
+                
+                <div id="edit-section">
+                    <form onsubmit="event.preventDefault(); editData()" method="PUT">
+                        <h1>Edit Profile</h1>
+                        <p><input class="box-kecil" type="text" id="username" name="username" placeholder="Username"></p>
+                        <p><input class="box-kecil" type="text" id="fullname" name="fullname" placeholder="Full Name"></p>
+                        <p><input class="box-kecil" type="email" id="email" name="email" placeholder="Email"></p>
+                        <p><input class="box-kecil" type="text" id="bio" name="bio" placeholder="Bio"></p>
+                        <p><input class="box-kecil" type="url" id="photo_profile" name="photo_profile" placeholder="Photo"></p>
+                        <button type="submit" id="save-button">Save changes</button>
+                    </form>
+                </div>
+
+                <div id="edit-password">
+                    <form onsubmit="event.preventDefault(); editPassword()" method="PUT">
+                        <h1>Edit Password</h1>
+                        <p><input class="box-kecil" type="password" id="current_password" name="current_password" placeholder="Current Password"></p>
+                        <p><input class="box-kecil" type="password" id="new_password" name="new_password" placeholder="New Password"></p>
+                        <p><input class="box-kecil" type="password" id="verify_password" name="verify_password" placeholder="Verify Password"></p>
+                        <button type="submit" id="save-button">Save changes</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </div>
+<script>
+    getProfile()
+    countTweet()
+    followings()
+    followers()
+    dropDown()
+    showEditData()
+</script>
+<script>
+    function removeCookie() {
+        document.cookie = 'username=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        window.location = '/Login.html';
+    }
+</script>
+</body>
+</html>
