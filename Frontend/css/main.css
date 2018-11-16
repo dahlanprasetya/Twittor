@@ -162,12 +162,12 @@ section {
 }
 
 /* SECTION KIRI */
-section img:nth-child(n+1) {
+#background-img:nth-child(n+1) {
     width: 100%;
     height: 120px;
 }
 
-section img:nth-child(n+2) {
+#photo-profile:nth-child(n+2) {
     width: 10%;
     width: 100px;
     height: 100px;
@@ -206,9 +206,15 @@ section img:nth-child(n+2) {
 
 #trending-section {
     margin: 8px 8px 8px 0px;
-    padding: 8px 8px 8px 8px;
+    padding: 8px 8px 8px 12px;
     background-color: white;
     height: auto;
+    
+}
+
+#trending-section a {
+    color: skyblue;
+    text-decoration: none;
 }
 
 #profile-name {
@@ -280,39 +286,41 @@ section img:nth-child(n+2) {
     background-color: white;
     display: grid;
     grid-template-areas: 
-    'a a . b b b b u u e e'
-    'a a . c c c c c c c c'
+    'a a . b b b b b b e e'
+    'a a c c c c c c c c c'
     '. . . d d d d d d d d'
     '. . . . . . f f f f f';
-    grid-template-columns: repeat(10, 1fr);
+    /* grid-template-columns: repeat(10, 1fr); */
     border-bottom: 4px solid lightgray;
 }
 
 .tweet h3 {
     font-size: 18px;
-    
-    grid-area: b;
+    padding-left: 20px;
 } 
 
 .tweet a {
     text-decoration: none;
     color: black;
+    grid-area: b;
+    display: inline-block;
 }
 
 .tweet h4 {
     font-size: 15px;
-    
-    grid-area: u;
 }
 
 .tweet img {
     grid-area: a;
     border-radius: 50%;
+    width: 130px;
+    height: 130px;
     margin: 8px;
 }
 
 .tweet p {
     grid-area: c;
+    padding-left: 20px;
 }
 
 .tweet video {

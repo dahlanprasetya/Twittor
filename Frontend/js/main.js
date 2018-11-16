@@ -105,10 +105,10 @@ function dropDown(){
             data = JSON.parse(this.response);
             document.getElementById('dropdown').insertAdjacentHTML ("afterbegin",`<img class="dropbtn" href="#" src="${data.photo_profile}" alt="orang"/>
             <div class="dropdown-content">
-                <a id="profile-dropdown" href="profile.html?id=${data.person_id}">${data.fullname}</a>
-                <a href="edit.html">Setting and Privacy</a>
-                <a href="#">Help Center</a>
-                <a onclick="removeCookie()" href="Login.html" id="logout-button">Log Out</a>
+                <a id="profile-dropdown" href="profile.html?id=${data.person_id}"><i class="far fa-user"></i> ${data.fullname}</a>
+                <a href="edit.html"><i class="fas fa-wrench"></i> Setting and Privacy</a>
+                <a href="#"><i class="fas fa-info-circle"></i> Help Center</a>
+                <a onclick="removeCookie()" href="Login.html" id="logout-button"><i class="fas fa-power-off"></i> Log Out</a>
             </div>`)};
         }
     xmlHttp.send()
@@ -156,8 +156,7 @@ function allTweet() {
                 // console.log(masukanTweet);
             document.getElementById('feed-section').insertAdjacentHTML ("afterbegin", `<div id="tweet_${masukanTweet.id}" class="tweet">
             <img src="${masukanTweet.photo_profile}" alt="foto orang" />
-            <h3><a href="profile.html?id=${masukanTweet.person_id}">${masukanTweet.fullname}</a></h3>
-            <h4><a href="profile.html?id=${masukanTweet.person_id}">${masukanTweet.username}</a></h4>
+            <h3><a href="profile.html?id=${masukanTweet.person_id}">${masukanTweet.fullname}</a></h3><h4><a href="profile.html?id=${masukanTweet.person_id}">${masukanTweet.username}</a></h4>
             <p>${masukanTweet.content}</p>
             <span>${masukanTweet.date}</span>
             <button class="delete-button" type="submit" onclick="deleteTweet(${masukanTweet.id})" id="del${index}">Delete</button> 
@@ -239,8 +238,8 @@ function getProfile() {
     xmlHttp.onreadystatechange = function (){
         if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.response);
-            document.getElementById('profile-section').insertAdjacentHTML ("afterbegin", `<img src="img/profile-background.jpg"/>
-            <img src="${data.photo_profile}" style="margin-left: 10px;">
+            document.getElementById('profile-section').insertAdjacentHTML ("afterbegin", `<img id="background-img" src="img/profile-background.jpg"/>
+            <img id="photo-profile" src="${data.photo_profile}" style="margin-left: 10px;">
             <div id="profile-name">
                 <b ><a id="fullname-profile" href="profile.html?id=${data.person_id}">${data.fullname}</a></b>
                 <p ><a id="username-profile" href="profile.html?id=${data.person_id}">${data.username}</a></p>
